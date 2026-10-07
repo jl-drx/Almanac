@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ec">
+  <meta name="description" content="Little expeditions. Big discoveries. A playful, illustrated world of hands-on learning for curious minds aged 8–12.">
+  <title>Almanac — A world of what if.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23eebd59'/%3E%3Cpath d='M32 10v44M10 32h44M17 17l30 30M17 47l30-30' stroke='%23232f31' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to expeditions</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="Almanac home"><span class="brand-mark" aria-hidden="true">✳</span>almanac<span class="brand-period">.</span></a>
+    <nav aria-label="Main navigation"><a href="#expeditions" class="nav-active">Expeditions</a><button data-open="notes">Field notes <span class="count" id="nav-count">0</span></button><button data-open="about">Our little universe <span aria-hidden="true">↗</span></button></nav>
+    <span class="explorer-tag"><span class="mini-star" aria-hidden="true">✧</span> Stay curious</span>
+  </header>
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="intro-title">
+      <div><p class="eyebrow"><span class="tiny-dot"></span> A FIELD GUIDE FOR CURIOUS MINDS</p><h1 id="intro-title">A world of <span class="serif">what if.</span></h1></div>
+      <p class="intro-copy">Big questions. Little adventures.<br>Go somewhere new. Find something wonderful.</p>
+    </section>
+    <section class="hero" id="expeditions" aria-labelledby="hero-title">
+      <div class="hero-art" id="hero-art" aria-hidden="true"></div>
+      <div class="hero-copy"><p class="expedition-label"><span class="live-dot"></span> READY FOR TAKEOFF <span class="label-line"></span> 001</p><h2 id="hero-title">Little ship.<br>Big universe.</h2><p>Take the pilot’s seat. Hop between worlds.<br>Discover the extraordinary in our<br class="desktop-br"> cosmic neighbourhood.</p><button class="button button-yellow" id="launch">Let’s explore <span aria-hidden="true">↗</span></button><div class="hero-meta"><span>AGES 8–12</span><i></i><span>5–8 MIN</span><i></i><span>3 DISCOVERIES</span></div></div>
+      <div class="hero-caption"><span class="caption-cross">+</span> THE COSMIC NEIGHBOURHOOD <span class="caption-index">SPACE / 01</span></div>
+    </section>
+    <div class="under-hero"><span><span class="outlined-star" aria-hidden="true">✧</span> A little play. A lot to discover.</span><span>No scores to chase. Just curiosity. <svg viewBox="0 0 26 16" width="26" height="16" aria-hidden="true"><path d="M2 9c4 6 8 5 10-1s4-9 6-4 3 6 6 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span></div>
+    <section class="horizons" aria-labelledby="horizons-title">
+      <div class="section-top"><div><p class="eyebrow">SO MUCH MORE OUT THERE</p><h2 id="horizons-title">Where could curiosity take us?</h2></div><span class="sketch-label">IN THE SKETCHBOOK <span aria-hidden="true">↙</span></span></div>
+      <div class="world-grid">
+        <article class="world-card history"><div class="world-art" id="history-art" aria-hidden="true"></div><div class="world-copy"><span class="world-category">THROUGH TIME</span><h3>The past is a place.</h3><p>Step into the stories that made us.</p></div><span class="future-badge">An idea for our next expedition</span></article>
+        <article class="world-card weather"><div class="world-art" id="weather-art" aria-hidden="true"></div><div class="world-copy"><span class="world-category">PLANET EARTH</span><h3>A wonderfully wild world.</h3><p>Follow the wind. Find the why.</p></div><span class="future-badge">An idea for our next expedition</span></article>
+        <article class="world-card biology"><div class="world-art" id="biology-art" aria-hidden="true"></div><div class="world-copy"><span class="world-category">LIVING THINGS</span><h3>Small is extraordinary.</h3><p>Get closer to the life all around us.</p></div><span class="future-badge">An idea for our next expedition</span></article>
+      </div>
+    </section>
+    <section class="notebook-strip"><div class="notebook-icon" aria-hidden="true">▤</div><div><p class="eyebrow">SOUVENIRS FOR YOUR MIND</p><h2>Your discoveries belong in a notebook.</h2><p id="notebook-description">Every expedition leaves you with something to remember.</p></div><button class="text-button" data-open="notes">Open field notes <span aria-hidden="true">↗</span></button></section>
+  </main>
+  <footer class="wrap"><a class="brand small" href="./">almanac.</a><span>A little more wonder, every day.</span><button data-open="about">Made for curious humans <span aria-hidden="true">✳</span></button></footer>
+  <dialog id="expedition" class="expedition-dialog" aria-label="Cosmic neighbourhood expedition">
+    <div class="flight-header"><button class="back-button" id="exit-flight"><span aria-hidden="true">←</span> Base camp</button><span class="flight-title">THE COSMIC NEIGHBOURHOOD</span><div class="flight-tools"><button id="sound" aria-pressed="false" aria-label="Turn sound on">Sound off</button><button id="pause" aria-pressed="false">Pause</button><button id="calm" aria-pressed="false">Calm mode</button></div></div>
+    <div class="flight-main">
+      <canvas id="space" tabindex="0" aria-label="Space map. Fly with arrow keys or W A S D. Press E near a world to investigate. You can also use the destination buttons to fly automatically."></canvas>
+      <div class="flight-heading"><p class="eyebrow">YOUR FIRST EXPEDITION</p><h2>Follow your curiosity.</h2><p>Pick a world. We’ll take you there.</p></div>
+      <div class="destination-bar" id="destinations" aria-label="Choose a world"></div>
+      <div class="flight-status" id="flight-status" role="status">Your ship is ready, explorer.</div>
+      <button id="investigate" class="button button-yellow investigate" hidden>Investigate</button>
+      <div class="flight-bottom"><span class="flight-instructions"><kbd>W A S D</kbd> or <kbd>↑ ← ↓ →</kbd> to fly <span>·</span> <kbd>E</kbd> to investigate</span><span class="flight-discoveries" id="flight-count">0 / 3 discoveries</span></div>
+      <div class="touch-controls" aria-label="Flight controls"><button data-direction="up" aria-label="Fly up">↑</button><button data-direction="left" aria-label="Fly left">←</button><button data-direction="down" aria-label="Fly down">↓</button><button data-direction="right" aria-label="Fly right">→</button></div>
+      <span class="scale-note">An illustrated map. Sizes, distances and travel are not to scale.</span>
+      <div class="paused-overlay" id="paused-overlay" hidden><span>Take a breath, explorer.</span><button class="button button-yellow" id="resume">Keep exploring →</button></div>
+    </div>
+  </dialog>
+  <dialog id="discovery" class="panel-dialog discovery-dialog" aria-labelledby="discovery-title"></dialog>
+  <dialog id="notes" class="panel-dialog" aria-labelledby="notes-title"></dialog>
+  <dialog id="about" class="panel-dialog about-dialog" aria-labelledby="about-title"><button class="close-dialog" data-close="about" aria-label="Close about">×</button><p class="eyebrow">HELLO, CURIOUS HUMAN</p><h2 id="about-title">Wonder is a good<br>place to start.</h2><p>Almanac is a little playground for big questions. We’re making illustrated, interactive expeditions for curious minds aged 8–12.</p><div class="about-values"><p><strong>Learn by trying.</strong> Turn, jump, investigate. Make a discovery your own.</p><p><strong>Room to be curious.</strong> No countdowns, leaderboards, or penalties for getting something wrong.</p><p><strong>Made to travel lightly.</strong> Original geometric artwork, small downloads, and controls for keyboards and touchscreens.</p></div><p class="fine-print">This is our first playable prototype. Space is ready to explore; our other worlds are ideas in development. Your discoveries are saved only in this browser. No accounts, ads, or analytics.</p><p class="fine-print">Science references are linked in each discovery. Our illustrations and experiments simplify the real world and say where they do.</p></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><p class="noscript">Please enable JavaScript to fly your ship and try the experiments.</p></noscript>
+</body>
+</html>

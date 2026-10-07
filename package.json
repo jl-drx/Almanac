@@ -1,0 +1,11 @@
+{
+  "name": "almanac",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node --check dist/app.js && node --check dist/engine.js && node --check dist/art.js && node --check dist/content.js",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
