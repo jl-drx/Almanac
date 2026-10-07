@@ -1,5 +1,7 @@
 # Almanac
 
+**Handover status:** development paused for a move to the cloud. Read [HANDOFF.md](HANDOFF.md) first: the user has superseded the landing-page design with a full-viewport, continuous museum world. `dist/museum.js` is an unfinished, unintegrated experiment; the rest of this README describes the working first prototype.
+
 An illustrated browser learning playground for ages 8–12. The first playable expedition connects Earth, the Moon, and Mars through free flight, assisted travel, interactive experiments, gentle explanatory questions, and a persistent field notebook.
 
 ## Run
